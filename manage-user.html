@@ -418,7 +418,50 @@
         <section>
             <div class="d-flex justify-content-between pb-4 px-1 px-md-5">
                 <h4 class="fw-bold px-1">Manage User</h4>
-                <button class="d-flex btn btn-outline-light bg-secondary-light text-dark">Add User</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModaladduser">
+                    Add User
+                  </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModaladduser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Add New User</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <form action="">
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">Username <span class="text-danger"><sup>*</sup> </span></label>
+                                            <input type="name" class="form-control">
+                                        </div>
+                                        <div class="mb-3 ">
+                                            <label class="form-label">User Type </label>
+                                            <select class="form-select form-control mb-3" aria-label="Default select example">
+                                                  <option value="1">Admin</option>
+                                                 <option value="2">Waiter</option>
+                                                 <option value="3">Admin</option>
+                                              </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold"> Password  <span class="text-danger"><sup>*</sup> </span></label></label>
+                                            <input type="password" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold"> Confirm Password  <span class="text-danger"><sup>*</sup> </span></label></label>
+                                            <input type="password" class="form-control">
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button type="button" class="btn btn-success ">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div>
                 <table class="table table-striped">
@@ -454,6 +497,14 @@
                                                             <label class="form-label fw-semibold">Username <span class="text-danger"><sup>*</sup> </span></label>
                                                             <input type="name" class="form-control">
                                                         </div>
+                                                        <div class="mb-3 ">
+                                                            <label class="form-label">User Type </label>
+                                                            <select class="form-select form-control mb-3" aria-label="Default select example">
+                                                                  <option value="1">Admin</option>
+                                                                 <option value="2">Waiter</option>
+                                                                 <option value="3">Admin</option>
+                                                              </select>
+                                                        </div>
                                                         <div class="mb-3">
                                                             <label class="form-label fw-semibold"> Password  <span class="text-danger"><sup>*</sup> </span></label></label>
                                                             <input type="password" class="form-control">
@@ -462,6 +513,7 @@
                                                             <label class="form-label fw-semibold"> Confirm Password  <span class="text-danger"><sup>*</sup> </span></label></label>
                                                             <input type="password" class="form-control">
                                                         </div>
+
                                                     </form>
                                                 </div>
 
@@ -498,6 +550,14 @@
                                                         <div class="mb-3">
                                                             <label class="form-label fw-semibold">Username <span class="text-danger"><sup>*</sup> </span></label>
                                                             <input type="name" class="form-control">
+                                                        </div>
+                                                        <div class="mb-3 ">
+                                                            <label class="form-label">User Type </label>
+                                                            <select class="form-select form-control mb-3" aria-label="Default select example">
+                                                                  <option value="1">Admin</option>
+                                                                 <option value="2">Waiter</option>
+                                                                 <option value="3">Admin</option>
+                                                              </select>
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="form-label fw-semibold"> Password  <span class="text-danger"><sup>*</sup> </span></label></label>
