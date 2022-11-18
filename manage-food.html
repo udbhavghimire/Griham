@@ -379,7 +379,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="charts-chartjs.html">
+                        <a href="manage-food.html">
                             <i class="bi bi-circle"></i><span>Manage Food</span>
                         </a>
                     </li>
@@ -392,48 +392,6 @@
                     <span>Settings</span>
                 </a>
             </li>
-            <!-- End F.A.Q Page Nav -->
-
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-contact.html">
-                    <i class="bi bi-envelope"></i>
-                    <span>Contact</span>
-                </a>
-            </li> -->
-            <!-- End Contact Page Nav -->
-
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-register.html">
-                    <i class="bi bi-card-list"></i>
-                    <span>Register</span>
-                </a>
-            </li> -->
-            <!-- End Register Page Nav -->
-
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-login.html">
-                    <i class="bi bi-box-arrow-in-right"></i>
-                    <span>Login</span>
-                </a>
-            </li> -->
-            <!-- End Login Page Nav -->
-
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-error-404.html">
-                    <i class="bi bi-dash-circle"></i>
-                    <span>Error 404</span>
-                </a>
-            </li> -->
-            <!-- End Error 404 Page Nav -->
-
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-blank.html">
-                    <i class="bi bi-file-earmark"></i>
-                    <span>Blank</span>
-                </a>
-            </li> -->
-            <!-- End Blank Page Nav -->
-
         </ul>
 
     </aside>
@@ -444,10 +402,10 @@
 
         <section>
             <div class="d-flex justify-content-between ">
-                <h4 class="fw-bold">Food Category</h4>
+                <h4 class="fw-bold">Manage Food</h4>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-light bg-secondary-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Add Category
+    Add Menu Item
   </button>
 
                 <!-- Modal -->
@@ -455,27 +413,41 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Add Category</h5>
+                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Add New Menu Item</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div>
                                     <form action="">
+                                        <label class="form-label fw-semibold">Select Category <span class="text-danger"><sup>*</sup></span> </label>
+                                        <select class="form-select mb-3" aria-label="Default select example">
+                                            <option value="1">Snack</option>
+                                            <option value="2">Drink</option>
+                                            <option value="3">Three</option>
+                                          </select>
                                         <div class="mb-3">
-                                            <label class="form-label fw-semibold">Category Name</label>
+                                            <label class="form-label fw-semibold">Item Name <span class="text-danger"><sup>*</sup></span> </label>
                                             <input type="name" class="form-control">
                                         </div>
                                         <div class="mb-3">
-                                            <label class="form-label fw-semibold">Category Image</label>
+                                            <label class="form-label fw-semibold">Item Price <span class="text-danger"><sup>*</sup></span></label>
+                                            <input type="number" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">Item Image <span class="text-danger"><sup>*</sup></span></label>
                                             <input type="file" class="form-control">
                                             <img src="assets/img/noimage.webp" class="no-image img-fluid" alt="">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlTextarea1" class="form-label fw-semibold">Item Description</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                         </div>
                                     </form>
                                 </div>
 
                             </div>
                             <div class="modal-footer d-flex justify-content-center">
-                                <button type="button" class="btn btn-success ">Submit New Category</button>
+                                <button type="button" class="btn btn-success ">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -486,7 +458,9 @@
                     <thead>
                         <tr>
                             <th scope="col">SN</th>
+                            <th scope="col">Category</th>
                             <th scope="col">Name</th>
+                            <th scope="col">Price</th>
                             <th scope="col">Image</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -494,11 +468,13 @@
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
+                            <td>Snack</td>
                             <td>Chicken Burger</td>
+                            <td>Rs.<span>200</span> </td>
                             <td><img src="assets/img/burger.png" class="img-fluid" alt=""></td>
                             <td class="d-flex">
                                 <button type="button" class="btn btn-outline-dark mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                    Edit
+                                     Edit
                                   </button>
 
                                 <!-- Modal -->
@@ -506,27 +482,41 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Category</h5>
+                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Menu Item</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <div>
                                                     <form action="">
+                                                        <label class="form-label fw-semibold">Select Category <span class="text-danger"><sup>*</sup></span> </label>
+                                                        <select class="form-select mb-3" aria-label="Default select example">
+                                                                            <option value="1">Snack</option>
+                                                                            <option value="2">Drink</option>
+                                                                            <option value="3">Three</option>
+                                                                          </select>
                                                         <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Name</label>
+                                                            <label class="form-label fw-semibold">Item Name <span class="text-danger"><sup>*</sup></span> </label>
                                                             <input type="name" class="form-control">
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Image</label>
+                                                            <label class="form-label fw-semibold">Item Price <span class="text-danger"><sup>*</sup></span></label>
+                                                            <input type="number" class="form-control">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label fw-semibold">Item Image <span class="text-danger"><sup>*</sup></span></label>
                                                             <input type="file" class="form-control">
                                                             <img src="assets/img/noimage.webp" class="no-image img-fluid" alt="">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlTextarea1" class="form-label fw-semibold">Item Description</label>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                                         </div>
                                                     </form>
                                                 </div>
 
                                             </div>
                                             <div class="modal-footer d-flex justify-content-center">
-                                                <button type="button" class="btn btn-success ">Submit New Category</button>
+                                                <button type="button" class="btn btn-success ">Submit</button>
                                             </div>
                                         </div>
                                     </div>
@@ -536,39 +526,55 @@
                         </tr>
                         <tr>
                             <th scope="row">2</th>
+                            <td>Snack</td>
                             <td>Veg Burger</td>
+                            <td>Rs.<span>150</span> </td>
                             <td><img src="assets/img/burger.png" class="img-fluid" alt=""></td>
                             <td class="d-flex">
                                 <button type="button" class="btn btn-outline-dark mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal3">
                                     Edit
-                                  </button>
+                                 </button>
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Category</h5>
+                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Menu Item</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <div>
                                                     <form action="">
+                                                        <label class="form-label fw-semibold">Select Category <span class="text-danger"><sup>*</sup></span> </label>
+                                                        <select class="form-select mb-3" aria-label="Default select example">
+                                                                           <option value="1">Snack</option>
+                                                                           <option value="2">Drink</option>
+                                                                           <option value="3">Three</option>
+                                                                         </select>
                                                         <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Name</label>
+                                                            <label class="form-label fw-semibold">Item Name <span class="text-danger"><sup>*</sup></span> </label>
                                                             <input type="name" class="form-control">
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Image</label>
+                                                            <label class="form-label fw-semibold">Item Price <span class="text-danger"><sup>*</sup></span></label>
+                                                            <input type="number" class="form-control">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label fw-semibold">Item Image <span class="text-danger"><sup>*</sup></span></label>
                                                             <input type="file" class="form-control">
                                                             <img src="assets/img/noimage.webp" class="no-image img-fluid" alt="">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlTextarea1" class="form-label fw-semibold">Item Description</label>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                                         </div>
                                                     </form>
                                                 </div>
 
                                             </div>
                                             <div class="modal-footer d-flex justify-content-center">
-                                                <button type="button" class="btn btn-success ">Submit New Category</button>
+                                                <button type="button" class="btn btn-success ">Submit</button>
                                             </div>
                                         </div>
                                     </div>
@@ -578,39 +584,55 @@
                         </tr>
                         <tr>
                             <th scope="row">3</th>
+                            <td>Snack</td>
                             <td>Chicken Burger</td>
+                            <td>Rs.<span>200</span> </td>
                             <td><img src="assets/img/burger.png" class="img-fluid" alt=""></td>
                             <td class="d-flex">
                                 <button type="button" class="btn btn-outline-dark mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal4">
                                     Edit
-                                  </button>
+                                 </button>
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Category</h5>
+                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Menu Item</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <div>
                                                     <form action="">
+                                                        <label class="form-label fw-semibold">Select Category <span class="text-danger"><sup>*</sup></span> </label>
+                                                        <select class="form-select mb-3" aria-label="Default select example">
+                                                                           <option value="1">Snack</option>
+                                                                           <option value="2">Drink</option>
+                                                                           <option value="3">Three</option>
+                                                                         </select>
                                                         <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Name</label>
+                                                            <label class="form-label fw-semibold">Item Name <span class="text-danger"><sup>*</sup></span> </label>
                                                             <input type="name" class="form-control">
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Image</label>
+                                                            <label class="form-label fw-semibold">Item Price <span class="text-danger"><sup>*</sup></span></label>
+                                                            <input type="name" class="form-control">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label fw-semibold">Item Image <span class="text-danger"><sup>*</sup></span></label>
                                                             <input type="file" class="form-control">
                                                             <img src="assets/img/noimage.webp" class="no-image img-fluid" alt="">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlTextarea1" class="form-label fw-semibold">Item Description</label>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                                         </div>
                                                     </form>
                                                 </div>
 
                                             </div>
                                             <div class="modal-footer d-flex justify-content-center">
-                                                <button type="button" class="btn btn-success ">Submit New Category</button>
+                                                <button type="button" class="btn btn-success ">Submit</button>
                                             </div>
                                         </div>
                                     </div>

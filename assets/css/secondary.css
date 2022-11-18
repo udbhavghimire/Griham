@@ -5,3 +5,41 @@
     object-position: center;
     border-radius: 50% !important;
 }
+
+.no-image {
+    height: 200px !important;
+    width: 200px !important;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.form-control {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+label {
+    font-weight: bold !important;
+}
+
+.form-control:active,
+.form-control:focus {
+    border-color: black !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.no-image-bill {
+    height: 150px !important;
+    width: 150px !important;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.remarks {
+    height: 100px !important;
+}

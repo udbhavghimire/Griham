@@ -379,7 +379,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="charts-chartjs.html">
+                        <a href="manage-food.html">
                             <i class="bi bi-circle"></i><span>Manage Food</span>
                         </a>
                     </li>
@@ -387,53 +387,11 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-faq.html">
+                <a class="nav-link collapsed" href="vats-taxes.html">
                     <i class="bi bi-question-circle"></i>
-                    <span>Settings</span>
+                    <span>Vats and Taxes</span>
                 </a>
             </li>
-            <!-- End F.A.Q Page Nav -->
-
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-contact.html">
-                    <i class="bi bi-envelope"></i>
-                    <span>Contact</span>
-                </a>
-            </li> -->
-            <!-- End Contact Page Nav -->
-
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-register.html">
-                    <i class="bi bi-card-list"></i>
-                    <span>Register</span>
-                </a>
-            </li> -->
-            <!-- End Register Page Nav -->
-
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-login.html">
-                    <i class="bi bi-box-arrow-in-right"></i>
-                    <span>Login</span>
-                </a>
-            </li> -->
-            <!-- End Login Page Nav -->
-
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-error-404.html">
-                    <i class="bi bi-dash-circle"></i>
-                    <span>Error 404</span>
-                </a>
-            </li> -->
-            <!-- End Error 404 Page Nav -->
-
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-blank.html">
-                    <i class="bi bi-file-earmark"></i>
-                    <span>Blank</span>
-                </a>
-            </li> -->
-            <!-- End Blank Page Nav -->
-
         </ul>
 
     </aside>
@@ -443,59 +401,133 @@
         <!-- End Page Title -->
 
         <section>
-            <div class="d-flex justify-content-between ">
-                <h4 class="fw-bold">Food Category</h4>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-light bg-secondary-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Add Category
-  </button>
+            <div>
+                <h4 class="fw-bold">VATS And Taxes</h4>
+            </div>
+            <div class="pt-3 d-flex my-5">
+                <button type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#exampleModaladdvat">
+                    Add VAT
+                  </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModaladdvat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Add Category</h5>
+                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Add Tax</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div>
                                     <form action="">
                                         <div class="mb-3">
-                                            <label class="form-label fw-semibold">Category Name</label>
+                                            <label class="form-label fw-semibold">VAT Name</label>
                                             <input type="name" class="form-control">
                                         </div>
                                         <div class="mb-3">
-                                            <label class="form-label fw-semibold">Category Image</label>
-                                            <input type="file" class="form-control">
-                                            <img src="assets/img/noimage.webp" class="no-image img-fluid" alt="">
+                                            <label class="form-label fw-semibold">Vat Percentage</label>
+                                            <input type="number" class="form-control">
                                         </div>
                                     </form>
                                 </div>
 
                             </div>
                             <div class="modal-footer d-flex justify-content-center">
-                                <button type="button" class="btn btn-success ">Submit New Category</button>
+                                <button type="button" class="btn btn-success ">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#exampleModaladdtax">
+                    Add Tax
+                  </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModaladdtax" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Add Tax</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <form action="">
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">Tax Name</label>
+                                            <input type="name" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">Tax Percentage</label>
+                                            <input type="number" class="form-control">
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button type="button" class="btn btn-success ">Submit</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="mb-5">
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">SN</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Image</th>
+                            <th scope="col">VAT Name</th>
+                            <th scope="col">VAT %</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Chicken Burger</td>
-                            <td><img src="assets/img/burger.png" class="img-fluid" alt=""></td>
+                            <td>Mark</td>
+                            <td>10 %</td>
+                            <td class="d-flex">
+                                <button type="button" class="btn btn-outline-dark mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Edit
+                                  </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit VAT</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <form action="">
+                                                        <div class="mb-3">
+                                                            <label class="form-label fw-semibold">VAT Name</label>
+                                                            <input type="name" class="form-control">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label fw-semibold"><i class="fas fa-ruler-vertical"></i> VAT Percentage</label>
+                                                            <input type="number" class="form-control">
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer d-flex justify-content-center">
+                                                <button type="button" class="btn btn-success ">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>20 %</td>
                             <td class="d-flex">
                                 <button type="button" class="btn btn-outline-dark mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                                     Edit
@@ -506,111 +538,26 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Category</h5>
+                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit VAT</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <div>
                                                     <form action="">
                                                         <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Name</label>
+                                                            <label class="form-label fw-semibold">VAT Name</label>
                                                             <input type="name" class="form-control">
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Image</label>
-                                                            <input type="file" class="form-control">
-                                                            <img src="assets/img/noimage.webp" class="no-image img-fluid" alt="">
+                                                            <label class="form-label fw-semibold">VAT Percentage</label>
+                                                            <input type="number" class="form-control">
                                                         </div>
                                                     </form>
                                                 </div>
 
                                             </div>
                                             <div class="modal-footer d-flex justify-content-center">
-                                                <button type="button" class="btn btn-success ">Submit New Category</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Veg Burger</td>
-                            <td><img src="assets/img/burger.png" class="img-fluid" alt=""></td>
-                            <td class="d-flex">
-                                <button type="button" class="btn btn-outline-dark mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal3">
-                                    Edit
-                                  </button>
-
-                                <!-- Modal -->
-                                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Category</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div>
-                                                    <form action="">
-                                                        <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Name</label>
-                                                            <input type="name" class="form-control">
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Image</label>
-                                                            <input type="file" class="form-control">
-                                                            <img src="assets/img/noimage.webp" class="no-image img-fluid" alt="">
-                                                        </div>
-                                                    </form>
-                                                </div>
-
-                                            </div>
-                                            <div class="modal-footer d-flex justify-content-center">
-                                                <button type="button" class="btn btn-success ">Submit New Category</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Chicken Burger</td>
-                            <td><img src="assets/img/burger.png" class="img-fluid" alt=""></td>
-                            <td class="d-flex">
-                                <button type="button" class="btn btn-outline-dark mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                                    Edit
-                                  </button>
-
-                                <!-- Modal -->
-                                <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Category</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div>
-                                                    <form action="">
-                                                        <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Name</label>
-                                                            <input type="name" class="form-control">
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label fw-semibold">Category Image</label>
-                                                            <input type="file" class="form-control">
-                                                            <img src="assets/img/noimage.webp" class="no-image img-fluid" alt="">
-                                                        </div>
-                                                    </form>
-                                                </div>
-
-                                            </div>
-                                            <div class="modal-footer d-flex justify-content-center">
-                                                <button type="button" class="btn btn-success ">Submit New Category</button>
+                                                <button type="button" class="btn btn-success ">Submit</button>
                                             </div>
                                         </div>
                                     </div>
@@ -621,8 +568,104 @@
                     </tbody>
                 </table>
             </div>
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">SN</th>
+                            <th scope="col">Tax Name</th>
+                            <th scope="col">Tax %</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>10 %</td>
+                            <td class="d-flex">
+                                <button type="button" class="btn btn-outline-dark mx-2" data-bs-toggle="modal" data-bs-target="#exampleModaltax">
+                                    Edit
+                                  </button>
 
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModaltax" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Tax</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <form action="">
+                                                        <div class="mb-3">
+                                                            <label class="form-label fw-semibold">Tax Name</label>
+                                                            <input type="name" class="form-control">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label fw-semibold">Tax Percentage</label>
+                                                            <input type="number" class="form-control">
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer d-flex justify-content-center">
+                                                <button type="button" class="btn btn-success ">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>20 %</td>
+                            <td class="d-flex">
+                                <button type="button" class="btn btn-outline-dark mx-2" data-bs-toggle="modal" data-bs-target="#exampleModaltax2">
+                                    Edit
+                                  </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModaltax2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Tax</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <form action="">
+                                                        <div class="mb-3">
+                                                            <label class="form-label fw-semibold">Tax Name</label>
+                                                            <input type="name" class="form-control">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label fw-semibold">Tax Percentage</label>
+                                                            <input type="number" class="form-control">
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer d-flex justify-content-center">
+                                                <button type="button" class="btn btn-success ">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
+
 
 
 
